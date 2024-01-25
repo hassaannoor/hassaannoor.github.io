@@ -7,25 +7,22 @@ https://www.tooplate.com/view/2120-ben-resume
 */
 
   @font-face {
-      font-family: 'Plain';
-      src: url('../localfonts/Plain-Regular.woff2') format('woff2'),
-          url('../localfonts/Plain-Regular.woff') format('woff');
+      font-family: 'Alpha';
+      src: url('../localfonts/Alpha-Regular.otf') format('opentype');
       font-weight: normal;
       font-style: normal;
   }
 
   @font-face {
-      font-family: 'Plain';
-      src: url('../localfonts/Plain-Light.woff2') format('woff2'),
-          url('../localfonts/Plain-Light.woff') format('woff');
+      font-family: 'Alpha';
+      src: url('../localfonts/Alpha-Light.otf') format('opentype');
       font-weight: 300;
       font-style: normal;
   }
 
   @font-face {
-      font-family: 'Plain';
-      src: url('../localfonts/Plain-Bold.woff2') format('woff2'),
-          url('../localfonts/Plain-Bold.woff') format('woff');
+      font-family: 'Alpha';
+      src: url('../localfonts/Alpha-Medium.otf') format('opentype');
       font-weight: bold;
       font-style: normal;
   }
@@ -39,7 +36,7 @@ https://www.tooplate.com/view/2120-ben-resume
     --gray-color:           #909090;
     --p-color:              #7d7a7a;
 
-    --base-font-family:     "Plain", -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    --base-font-family:     "Alpha", -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
     --font-weight-bold:     600;
     --font-weight-normal:   400;
     --font-weight-light:    300;
@@ -309,8 +306,8 @@ https://www.tooplate.com/view/2120-ben-resume
     color: var(--white-color);
     display: inline-block;
     margin: 0.5rem 0;
-    padding: 0.5rem 2rem 1.5rem 2rem;
-	font-size: 2.2em;
+    padding: 0.5rem 2rem 0.5rem 2rem;
+	font-size: 1.8em;
   }
 
   .email-link {
@@ -614,3 +611,40 @@ https://www.tooplate.com/view/2120-ben-resume
       padding: 0.3rem 2rem 0.6rem 2rem;
     }
   }
+
+/* Custom */
+video {
+    /* filter: grayscale(1); */
+    filter: saturate(3);
+    border: 10px solid black;
+    cursor: pointer;
+}
+.play-btn {
+    height: 100%;
+    width: calc(100% - 15px);
+    display: block;
+    position: absolute;
+    z-index: 1;
+    cursor: pointer;
+}
+.play-btn:hover::after {
+    /* scale: 1.1; */
+    border: 3px solid yellow;
+    background-color: yellow;
+    color:#000;
+}
+.play-btn::after {
+    transition: 200ms;
+    content: 'Play';
+    background: #000;
+    padding: 8px 16px;
+    color: white;
+    cursor: pointer;
+    border-radius: 100px;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 2;
+}

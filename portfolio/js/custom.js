@@ -52,4 +52,18 @@
       });
     });   
      
+
+    // Portfolio videos
+    $('.play-btn').on('click', function(ev) {
+        let vid = $(this).next()[0]
+        vid.play();
+        $(vid).css({filter: 'none'})
+        $(this).hide();
+        
+    })
+    $('video').on('click', function(ev) {
+        this.pause();
+        $(this).css({filter: 'saturate(3)'})
+        $(this).prev().show();
+    })
   });
